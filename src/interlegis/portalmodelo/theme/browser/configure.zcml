@@ -91,15 +91,4 @@
             factory=".sitemap.InterlegisSitemapNavtreeStrategy"
             provides=".interfaces.IPortalModeloSiteMapStrategy" />
 
-   <plone:CORSPolicy
-     for="*"
-     layer="interlegis.portalmodelo.theme.interfaces.IBrowserLayer"
-     allow_origin="*"
-     allow_methods="GET, POST"
-     allow_credentials="true"
-     allow_headers="Accept,Authorization,Origin,X-Requested-With,Content-Type,Upload-Length,Upload-Offset,Tus-Resumable,Upload-Metadata"
-     expose_headers="Upload-Offset,Location,Upload-Length,Tus-Version,Tus-Resumable,Tus-Max-Size,Tus-Extension,Upload-Metadata"
-     max_age="3600"
-     />
-
 </configure>
