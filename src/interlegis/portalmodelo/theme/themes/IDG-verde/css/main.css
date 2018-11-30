@@ -102,8 +102,10 @@
 body {
     background-color: #fff;
     color: #000000;
-    font-size: 62.5%;
+    font-size: 95%;
     font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+    /*font-family: 'Roboto','Helvetica Neue','sans-serif';*/
+    /*font-size: 1.8em;*/
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -180,9 +182,10 @@ p {
 #main {
     margin: 0 auto;
     padding: 4.104em 0 1.5em;
-    max-width: 960px;
+    max-width: 99%;
     background: #fff;
     font-size: 1.3em;
+    /*margin-top: 0%;*/
 }
 
 /*
@@ -195,14 +198,19 @@ p {
 }
 
 #portal-column-two {
-    margin-left: -24.0625%;
-    width: 24.0625%;
+    /*margin-left: -24.0625%;*/
+    margin-left: -18%;
+    /*width: 24.0625%;*/
+   margin-top: 0%; 
+   width: 17%;
+    
 }
 
 /* Grids
    ========================================================================== */
 
-div.width-1\3a 2 { width: 51.25%; }
+/*div.width-1\3a 2 { width: 51.25%; }*/
+div.width-1\3a 2 { width: 62%; }
 
 div.width-2 { width: 13.061%; }
 
@@ -227,7 +235,8 @@ div.width-16 { width: 97.963%; }
 
 div.position-0 { margin-left: -97.963%; }
 
-div.position-1\3a 4 { margin-left: -78.2291%; }
+/*div.position-1\3a 4 { margin-left: -78.2291%; }*/
+div.position-1\3a 4 { margin-left: -82%; }
 
 div.position-3\3a 4 { margin-left: -16.75%; }
 
@@ -240,17 +249,11 @@ div.position-10 { margin-left: -30.042%; }
    Cabeçalho do portal
    ========================================================================== */
 
-#header {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: auto;
-}
-
 #header > div {
     position: relative;
     overflow: visible;
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 98%;
 }
 
 #brasilgov {
@@ -341,7 +344,7 @@ div.position-10 { margin-left: -30.042%; }
     float: left; 
     margin-top: 2em; 
     margin-bottom: 2em;
-    width: auto;
+    width: 80%;
 }
 
 
@@ -395,7 +398,7 @@ div.position-10 { margin-left: -30.042%; }
     float: right;
     clear: none;
     padding-bottom: 2px;
-    padding-top: 0;
+    padding-top: 15px;
 }
 
 #portal-siteactions li { display: inline; }
@@ -576,8 +579,8 @@ input.searchField { -moz-appearance: none; }
 }
 
 #content div.newsImageContainer {
-    float: left;
-    margin: 0 1em 1em 0;
+    float: none;
+    margin: 0;
 }
 
 #content div.newsImageContainer p.discreet {
@@ -958,6 +961,7 @@ dl.portlet dt a:link,
 dl.portlet dt a:visited { color: #464a55 !important; }
 
 #portal-column-two > .portletWrapper { margin-bottom: 1.9230em; }
+#portal-column-two > .portletWrapper:first-child { }
 
 #portal-column-two > .portletWrapper > .portletStaticText a,
 #portal-column-two > .portletWrapper > .portletStaticText img { display: inline-block; }
@@ -1011,10 +1015,9 @@ dl.portlet dt a:visited { color: #464a55 !important; }
 .portletNews .portletItem a,
 .portletCollection .portletItem a {
     display: block;
-    float: right;
     clear: both;
     margin: 1em 0;
-    width: 65%;
+    width: 100%;
     font-size: 1em;
 }
 
@@ -1023,8 +1026,6 @@ dl.portlet dt a:visited { color: #464a55 !important; }
 .portletNews .portletItem .portletItemDetails,
 .portletCollection .portletItem .portletItemDetails {
     display: block;
-    float: left;
-    margin: 1em 0 1em 1em;
     width: 24%;
     color: #596e7f;
     text-align: center;
@@ -1410,7 +1411,7 @@ dl.portlet ol li { list-style: decimal outside; }
    ========================================================================== */
 
 .portaltype-collective-cover-content #content .row {
-    margin: 0;
+    /*margin: 0;*/
     padding: 0;
 }
 
@@ -1440,19 +1441,6 @@ dl.portlet ol li { list-style: decimal outside; }
 
 #content .cover-collection-tile h2 {
     font-family: "open_sanssemibold", Arial, Helvetica, sans-serif;
-}
-
-#content [class|="cover"] h2 {
-  font-family: "open_sansregular", Arial, Helvetica, sans-serif;
-  font-size: 1.62em;
-  font-weight: normal;
-  color: #2C67CD;
-  background-color: #EEEFF1;
-  border-top: 4px solid #2C67CD;
-  margin-bottom: 1em;
-  padding: 0.5em;
-  padding-bottom: 0;
-  min-height: 48px;
 }
 
 #content .cover-collection-tile h2 a { color: #172938; }
@@ -3409,3 +3397,35 @@ body.contraste #doormat-container .doormatColumn {
 
     * { position: relative !important; }
 }
+
+/*  ALTERAÇÕES AGENDA DO SITE */
+
+/* Cor do texto quando coloca o mouse sobre o envento */
+#content #calendar .fc-content a:hover {
+    color:#000000 !important;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+/* Cor do texto do evento*/
+/* workflow state color "published". Other definitions in member.css */
+#content #calendar .state-published {
+    color: #000000 !important;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+/*COR DE FUNDO */
+#content #calendar .fc-event {
+border: 1px solid #DCDCDC; /* */
+background-color: #DCDCDC; /* */
+color: #111111;               /* */
+font-size: 0.80em;
+cursor: default;
+}
+
+/*ALTERA O TAMANHO DA FONTE QUANDO SELECIONAMOS UM EVENTO*/
+.ui-widget {
+    font-size: 1.9em;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+/* FIM ALTERAÇÃO AGENDA DO SITE*/

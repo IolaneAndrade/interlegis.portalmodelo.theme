@@ -1,5 +1,5 @@
 /**
- * Galleria IDG Theme for use with collective.cover in Interlegis Portal Modelo 3.0 - 2015-05-15
+ * Galleria PM3 Theme for use with collective.cover in Interlegis Portal Modelo 3.0 - 2015-05-15
  *
  * http://galleria.io
  * Licensed under the MIT license
@@ -10,25 +10,28 @@
 
 /*global jQuery, Galleria */
 
-$('.galleria').addClass('tema-idg-verde');
+$('.galleria').addClass('tema-pm3');
 
 Galleria.addTheme({
-    name: 'tema-idg-verde',
+    name: 'tema-pm3',
     author: 'Caio Viotti, http://caio.viotti.me',
-    css: 'galleria.tema-idg-verde.css',
+    css: 'galleria.tema-pm3.css',
     defaults: {
         thumbnails: 'empty',
-        showImagenav: false,
+        showImagenav: true,
         imageCrop: 'landscape',
         fullscreenDoubleTap: false,
-        idleMode: 'hover',
+        idleMode: false,
         carousel: false,
         autoplay: true,
         _toggleInfo: false
     },
     init: function(options) {
 
-        this.$('info').appendTo('.galleria');
+        this.$('info').appendTo('.galleria-stage');
+        this.$('thumbnails-container').appendTo('.galleria-stage');
+        this.$('image-nav-right').append("<span><i class='icon-caret-right'></i></span>")
+        this.$('image-nav-left').append("<span><i class='icon-caret-left'></i></span>")
 
         Galleria.requires(1.28, 'This theme requires Galleria 1.2.8 or later');
 
@@ -41,8 +44,6 @@ Galleria.addTheme({
 
         // some stuff for non-touch browsers
         if (! touch ) {
-            this.addIdleState( this.get('image-nav-left'), { left:-50 });
-            this.addIdleState( this.get('image-nav-right'), { right:-50 });
             this.addIdleState( this.get('counter'), { opacity:0 });
         }
 

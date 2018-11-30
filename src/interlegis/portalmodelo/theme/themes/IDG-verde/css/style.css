@@ -228,11 +228,13 @@
     .portletNavigationTree .portletHeader {
         background: #edeff1 url("../img/portlet-header.gif") no-repeat right 5px bottom 4px;
         background-size: 15px;
+        
     }
 
     .portletNavigationTree .portletHeader.ativo {
         background: #edeff1 url("../img/portlet-header-expanded.gif") no-repeat right 5px bottom 4px;
         background-size: 15px;
+        
     }
 
 }
@@ -243,6 +245,11 @@
 @media only screen and (min-width : 320px) and (max-width : 768px) {
   .menuTrigger {
       background: #065116 url("../img/bg-menu-mobile.png") top right no-repeat;
+      
+    .galleria-info-title {
+        font: bold 12px arial, sans-serif;
+        line-height: 15px;
+    }
   }
 }
 
@@ -250,4 +257,315 @@
   #header #portal-searchbox .searchButton {
     background: url("../img/search-button-30px.png") no-repeat;
   }
+  
+  #portal-column-two > .portletWrapper
+  {
+      margin-left: 15px;
+      margin-right: 15px;
+  }
+  #content
+  {
+      padding-left: 25px;
+  }
+  #footer table {
+      text-align: left;
+  }
 }
+
+hr
+{
+    color: #dfdfdf;
+    border-color: #dfdfdf;
+    background-color: #dfdfdf;
+    margin:0 auto; 
+    border:0px none white; 
+    border-top:1px solid lightgrey
+}
+
+.parlamentares
+{
+    display: inline;
+    margin: 0;
+    list-style: none !important;
+    position: relative;
+}
+
+.parlamentares li{
+    float: left;
+    list-style: none !important;
+    margin: 3px 3px 3px 3px;
+}
+
+.parlamentares img {
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.parlamentares div.thumbnail {
+    min-width: 190px;
+    max-width: 190px;
+    min-height: 283px;
+    max-height: 283px;
+}
+
+/*Fix bootstrap issues*/
+.label
+{
+    color: black !important;
+    text-align: left !important;
+}
+
+.label:empty {
+    display: inline !important;
+}
+
+#content div.tile.tile-shadow.ui-droppable {
+    min-height: 400px;
+    max-height: 400px;
+}
+
+/*Configuração dos portlets*/
+
+
+dl.portlet dt.portletHeader:has(a[href*='transparencia']) {
+    border-top: 4px solid red !important;
+    color: red !important;
+}
+
+#portletwrapper-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f636d5f676f672f706f7274616c0a6d69646961732d736f6369616973 {
+    margin-top:0px !important;
+}
+
+@media (max-width: 768px) 
+{  
+    #portal-columns{
+        margin-left: 0 !important;
+    }
+ 
+    #content div.tile.tile-shadow.ui-droppable[id='f0cde3674a664f9286cd9e156c8060cc'] {
+        min-height: 800px !important;
+        max-height: 800px !important;
+    }
+    
+    #content div.tile.tile-shadow.ui-droppable[id='561e9dc9effb4022ae7e87f262364949'] {
+        min-height: 650px !important;
+        max-height: 650px !important;
+    }
+        
+    .galleria-container {
+        height: 743px !important;
+    }
+    
+    .galleria-stage {
+        top: 60px !important;   
+    }
+}
+
+#portal-breadcrumbs #breadcrumbs-you-are-here {
+    margin-left: 15px;
+}
+
+#content div.tile.tile-shadow.ui-droppable[id='f0cde3674a664f9286cd9e156c8060cc'] {
+        min-height: 820px !important;
+        max-height: 820px !important;
+    }
+
+td
+{
+   font-size:16px; !important; 
+}
+
+/*** Tabela Licitação***/
+
+.tabelalicitacao
+{
+}
+.tabelalicitacao #th2 {
+       background: gray;
+       width: 60%;
+       overflow: auto;
+       word-wrap:break-word;
+}
+
+.tabelalicitacao #th1 {
+       background: gray;
+       width: 15%;
+       overflow: auto;
+       word-wrap:break-word;
+}
+
+.tabelalicitacao #th3 {
+       background: gray;
+       width: 5%;
+       overflow: auto;
+       word-wrap:break-word;
+}
+
+.table-footer
+{
+    
+}
+
+.table-footer td
+{
+    font-size:14px; !important;
+    margin:0px; !important;
+    padding: 0px; 
+    
+}
+.table-footer li
+{
+    padding-bottom: 0.5em; !important;
+}
+.thumbnail_camara
+{
+    margin-bottom: 3px !important;
+}
+
+/****galeria de fotos em destaque****/
+
+
+
+@media (max-width : 480)
+{
+    .galleria-info-title {
+        font: bold 12px arial, sans-serif;
+        line-height: 15px;
+    }
+}
+
+.galleria-info {
+    bottom: auto !important;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    position: absolute;
+    background-color: white !important;
+}
+
+.galleria-info-title {
+    font: bold 30px arial, sans-serif;
+    margin: 0;
+    margin-bottom: 7px;
+    line-height: 36px;
+    text-align: center;
+}
+
+/***Classe Transparencia***/
+
+.transparencia-titulo{
+  font-weight: bold;
+  font-size: 150%;
+  font-family:"open_sansregular", "Arial", "Helvetica", "sans-serif";
+  max-width: 200%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 1;
+}
+
+/* Table Base */
+
+table-transparencia {
+  font-family:"open_sansregular", "Arial", "Helvetica", "sans-serif";
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 1;
+}
+
+.table-transparencia { 
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table-transparencia th,
+
+.table-transparencia td {
+  font-weight: normal;
+  font-size: 1.15em;
+  padding: 8px 15px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+}
+
+.table-transparencia2 td {
+  font-weight: normal;
+  font-size: 1.15em;
+  padding: 8px 15px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: middle;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+
+.table-transparencia thead th {
+ background: #eeeeee;
+  vertical-align: bottom;
+}   
+
+.table-transparencia tbody > tr:nth-child(odd) > td,
+.table-transparencia tbody > tr:nth-child(odd) > th {
+  background-color: #eaeaea;
+} 
+
+.table-transparencia .t-small {
+  width: 5%;
+}
+
+.table-transparencia .t-medium {
+  width: 15%;
+}
+
+.table-transparencia .t-status {
+  font-weight: bold;
+}
+
+.table-transparencia .t-active {
+  color: #46a546;
+}
+.table-transparencia .t-inactive {
+  color: #e00300;
+}
+
+.table-transparencia .t-draft {
+  color: #f89406;
+}
+
+.table-transparencia .t-scheduled {
+  color: #049cdb;
+}
+
+/* Small Sizes */
+@media (max-width: 480px) { 
+  .table-transparencia-action thead {
+    display: none;
+  }
+  
+  .table-transparencia-action tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .table-transparencia-action td {
+    border: 0;
+    display: block;
+  }
+  
+  .table-transparencia-action td:nth-child(odd) {
+    background-color: #eaeaea;
+} 
+  
+  /*.table-action td:not(:first-child) {
+    display: block;
+  }*/
+}
+
+
+/***Fim Tabela Transparencia***/

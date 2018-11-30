@@ -240,41 +240,23 @@ var PBrasil = {
 jQuery(document).ready(function ($) {
     "use strict";
     PBrasil.init();
-    if (Galleria.get().length !== 0) {
-        Galleria.configure({wait: true});
-    }
+    
+    $('.collection-item h3 a').each(function() {
+        var text = $(this).text();
+        $(this).html(text.replace('VÍDEO', '<b style="color:red;">VÍDEO</b>')); 
+        
+    });
+    
+
+
+$('.summary.url').each(function() {
+        var text = $(this).text();
+        $(this).html(text.replace('VÍDEO', '<b style="color:red;">VÍDEO</b>')); 
+        
+    });
 });
 
 $(window).load(function() {
     PBrasil.albuns.fixAlbumHeight();
-    
-    /*
-     * Confere se existe uma Galleria do Cover na página, e então carrega um novo tema.
-     */
-    if (Galleria.get().length !== 0) {
-        if ($('.galleria-container').parent().hasClass('cover-carousel-tile')) {
-            if (!$('body').hasClass('template-compose')) {
-                //Unload e destruição da Galleria atual
-                Galleria.unloadTheme();
-                Galleria.get(0).destroy();
-                //Reinicia a Galleria com o novo tema carregado
-                Galleria.loadTheme('++theme++IDG-verde/galleria-theme/galleria.tema-idg-verde.js');
-                Galleria.run('.galleria', {
-                    theme: 'tema-idg-verde'
-                });
-                //Configurações do tema
-                Galleria.configure({
-                    wait: true,
-                    height: 0.564,
-                    transition: 'fade',
-                    touchTransition: 'fadeslide',
-                    transition_speed: 500,
-                    imageCrop: 'landscape',
-                    showImagenav: false,
-                    fullscreenDoubleTap: false,
-                    idleMode: 'hover',
-                });
-            }
-        }
-    }
+
 });
